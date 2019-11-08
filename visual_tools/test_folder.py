@@ -84,9 +84,9 @@ data_transforms = transforms.Compose([
 ])
 
 image_datasets = datasets.ImageFolder(opts.input_folder, data_transforms)
-dataloader_content = torch.utils.data.DataLoader(image_datasets, batch_size=opts.batchsize, shuffle=False, pin_memory=True, num_workers=1)
+dataloader_content = torch.utils.data.DataLoader(image_datasets, batch_size=opts.batchsize, shuffle=True, pin_memory=True, num_workers=1)
 classes = image_datasets.classes
-dataloader_structure = torch.utils.data.DataLoader(image_datasets, batch_size=opts.batchsize, shuffle=True, pin_memory=True, num_workers=1)
+dataloader_structure = torch.utils.data.DataLoader(image_datasets, batch_size=opts.batchsize, shuffle=False, pin_memory=True, num_workers=1)
 image_paths = image_datasets.imgs
 
 ######################################################################
@@ -137,7 +137,7 @@ with torch.no_grad():
                 outputs = decode(c, f)
                 im = recover(outputs[0].data.cpu())
                 im = Image.fromarray(im.astype('uint8'))
-                ID = name.split('_')
+                camera = name.split('_')[1]
                 class1 = classes[label]
                 class2 = classes[label2]
                 dst_path = opts.output_folder + "/" + class1
@@ -146,8 +146,8 @@ with torch.no_grad():
                     os.mkdir(dst_path)
                 if not os.path.isdir(dst_path2):
                     os.mkdir(dst_path2)
-                im.save(dst_path + '/%s_%s_gan%s.jpg'%(class2, class1, name[:-4]))
-                im.save(dst_path2 + '/%s_%s_gan%s.jpg'%(class2, class1, name[:-4]))
+                im.save(dst_path + '/%s_%s_gan%s.jpg'%(class1, camera, name[:-4]))
+                im.save(dst_path2 + '/%s_%s_gan%s.jpg'%(class1, camera,name[:-4]))
             else:
                 pass
 print('---- start fid evaluation ------')
