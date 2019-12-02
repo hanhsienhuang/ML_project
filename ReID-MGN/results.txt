@@ -1,0 +1,139 @@
+RE, TripletLoss, id_aug, bg_auga
+[Without Re-Ranking] mAP: 0.8176 rank1: 0.9308 rank3: 0.9691 rank5: 0.9789 rank10: 0.9884
+[With    Re-Ranking] mAP: 0.9252 rank1: 0.9427 rank3: 0.9662 rank5: 0.9727 rank10: 0.9786
+
+RE, CenterLoss, no aug, 
+[Without Re-Ranking] mAP: 0.8675 rank1: 0.9498 rank3: 0.9757 rank5: 0.9825 rank10: 0.9896 
+[With    Re-Ranking] mAP: 0.9424 rank1: 0.9581 rank3: 0.9742 rank5: 0.9792 rank10: 0.984
+
+RE, CenterLoss, LabelSmooth, no aug:
+[Without Re-Ranking] mAP: 0.8644 rank1: 0.9492 rank3: 0.9762 rank5: 0.9837 rank10: 0.9905
+[With    Re-Ranking] mAP: 0.9453 rank1: 0.9584 rank3: 0.9760 rank5: 0.9795 rank10: 0.9849
+
+{'augment': ['../Market/pytorch/off-gan_id1/'],
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 500,
+ 'freeze': False,
+ 'label_smooth_ce': False,
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': 'False',
+ 'use_centerloss': False,
+ 'weight': 'weights/model.pt'}
+
+[Without Re-Ranking] mAP: 0.8300 rank1: 0.9347 rank3: 0.9691 rank5: 0.9786 rank10: 0.9881
+[With    Re-Ranking] mAP: 0.9323 rank1: 0.9495 rank3: 0.9691 rank5: 0.9765 rank10: 0.9834
+
+{'augment': ['../Market/pytorch/off-gan_id1/'],
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 500,
+ 'freeze': False,
+ 'label_smooth_ce': False,
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': 'True',
+ 'use_centerloss': False,
+ 'weight': 'weights/model.pt'}
+
+[Without Re-Ranking] mAP: 0.8311 rank1: 0.9394 rank3: 0.9688 rank5: 0.9765 rank10: 0.9887
+[With    Re-Ranking] mAP: 0.9312 rank1: 0.9466 rank3: 0.9679 rank5: 0.9739 rank10: 0.9816
+
+
+
+
+{'augment': ['../Market/pytorch/off-gan_id1/'],
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 500,
+ 'freeze': False,
+ 'label_smooth_ce': 'True',
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': True,
+ 'use_centerloss': 'True',
+ 'weight': 'weights/model.pt'}
+
+[Without Re-Ranking] mAP: 0.8384 rank1: 0.9350 rank3: 0.9700 rank5: 0.9771 rank10: 0.9872
+[With    Re-Ranking] mAP: 0.9314 rank1: 0.9477 rank3: 0.9673 rank5: 0.9754 rank10: 0.9798
+
+
+{'augment': ['../Market/pytorch/off-gan_id1/'],
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 500,
+ 'freeze': False,
+ 'label_smooth_ce': 'True',
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': 'False',
+ 'use_centerloss': 'True',
+ 'weight': 'weights/model.pt'}
+
+[Without Re-Ranking] mAP: 0.8403 rank1: 0.9409 rank3: 0.9718 rank5: 0.9819 rank10: 0.9896
+[With    Re-Ranking] mAP: 0.9340 rank1: 0.9534 rank3: 0.9727 rank5: 0.9777 rank10: 0.9810
+
+
+
+{'augment': ['../Market/pytorch/off-gan_id1/'],
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 750,
+ 'freeze': False,
+ 'label_smooth_ce': 'True',
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': True,
+ 'use_centerloss': False,
+ 'weight': 'weights/model.pt'}
+
+[With    Re-Ranking] mAP: 0.9310 rank1: 0.9457 rank3: 0.9670 rank5: 0.9733 rank10: 0.9798
+[Without Re-Ranking] mAP: 0.8367 rank1: 0.9379 rank3: 0.9721 rank5: 0.9798 rank10: 0.9875
+
+
+{'augment': None,
+ 'batchid': 4,
+ 'batchimage': 4,
+ 'batchtest': 8,
+ 'bnn_neck': False,
+ 'data_path': '../Market',
+ 'epoch': 750,
+ 'freeze': False,
+ 'label_smooth_ce': False,
+ 'lr': 0.0002,
+ 'lr_scheduler': [320, 380],
+ 'mode': 'train',
+ 'query_image': '0001_c1s1_001051_00.jpg',
+ 'random_erasing': True,
+ 'use_centerloss': False,
+ 'weight': 'weights/model.pt'}
+
+[With    Re-Ranking] mAP: 0.9434 rank1: 0.9561 rank3: 0.9736 rank5: 0.9777 rank10: 0.9837
+[Without Re-Ranking] mAP: 0.8550 rank1: 0.9454 rank3: 0.9765 rank5: 0.9834 rank10: 0.9893
+
