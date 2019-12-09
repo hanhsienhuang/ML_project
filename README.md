@@ -43,6 +43,6 @@ Please view the instruction [Here](ReID-MGN/README.md)
 #### Citation
 Codes are taken from [GNAYUOHZ / ReID-MGN](https://github.com/GNAYUOHZ/ReID-MGN) and [NVlabs / DG-Net](https://github.com/NVlabs/DG-Net) with some modification. 
 Tricks' code including Random Erasing, Label Smoothing and Center Loss are referencing [michuanhaohao / reid-strong-baseline](https://arxiv.org/abs/1904.07223)
-
+[KaiyangZhou / deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid) is also one of the reference we use.
 
 
