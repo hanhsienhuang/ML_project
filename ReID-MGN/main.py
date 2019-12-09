@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 
 import torch
 from torch.optim import lr_scheduler
-
 from opt import opt
 from data import Data
 from network import MGN

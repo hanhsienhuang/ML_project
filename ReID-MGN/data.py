@@ -1,13 +1,14 @@
-from opt import opt
-from torchvision import transforms
+import os
+from pathlib import Path
+
 from torch.utils.data import dataset, dataloader
+from torchvision import transforms
 from torchvision.datasets.folder import default_loader
+
+from opt import opt
 from utils.RandomErasing import RandomErasing
 from utils.RandomSampler import RandomSampler
-from opt import opt
-import os
-import re
-from pathlib import Path
+
 
 class Data():
     def __init__(self):

@@ -26,7 +26,20 @@ training identification may not appear in the testing identification.
 The best result is when we apply all three training tricks but without data augmentation and with re-ranking. We achieve a small improvement
 over the original MGN model and DG-Net model. 
 
+#### How To Run: 
+##### DG-Net
+###### Requirement
+- Python 3.6
+- GPU memory >= 10G (fp16/fp32)
+- NumPy
+- PyTorch 1.0+
 
+1. Prepare dataset
+``python prepare-market.py``
+2. Download teacher model from [DG-Net](https://github.com/NVlabs/DG-Net)
+3. Train `python train.py --config configs/latest.yml`
+##### MGN
+Please view the instruction [Here](ReID-MGN/README.md)
 #### Citation
 Codes are taken from [GNAYUOHZ / ReID-MGN](https://github.com/GNAYUOHZ/ReID-MGN) and [NVlabs / DG-Net](https://github.com/NVlabs/DG-Net) with some modification. 
 Tricks' code including Random Erasing, Label Smoothing and Center Loss are referencing [michuanhaohao / reid-strong-baseline](https://arxiv.org/abs/1904.07223)

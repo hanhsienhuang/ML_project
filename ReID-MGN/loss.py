@@ -1,11 +1,10 @@
-from opt import opt
-import torch
 from torch.nn import CrossEntropyLoss
-from torch import nn
 from torch.nn.modules import loss
-from utils.TripletLoss import TripletLoss
+
+from opt import opt
 from utils.CenterLoss import CenterLoss
 from utils.LSCrossEntropy import CrossEntropyLabelSmooth
+from utils.TripletLoss import TripletLoss
 
 
 class Loss(loss._Loss):
